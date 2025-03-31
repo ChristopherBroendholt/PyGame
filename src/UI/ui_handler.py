@@ -6,7 +6,7 @@ class UiHandler:
 
 	def __init__(self) -> None:
 		self.mass_slider = Slider(x=100, y=50, width=200, min_val=1, max_val=100, start_val=50, value_text='Mass')
-		self.force_slider = Slider(x=400, y=50, width=200, min_val=1, max_val=100000, start_val=5000, value_text='Force')
+		self.force_slider = Slider(x=400, y=50, width=600, min_val=1000, max_val=100000, start_val=50000, value_text='Force')
 		
 
 	def handle_events(self, events) -> None:

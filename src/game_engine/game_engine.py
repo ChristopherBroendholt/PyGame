@@ -43,7 +43,7 @@ class GameEngine:
 
 
 	def game_loop(self) -> None:
-		self.delta_time = self.clock.tick(300) / 1000.0
+		self.delta_time = self.clock.tick(60) / 1000.0
 
 		self.handle_events()
 		self.update_entities()

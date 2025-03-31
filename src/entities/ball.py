@@ -64,7 +64,7 @@ class Ball:
 		
 	def _get_pos_string(self) -> str:
 		x =	round((self.position.x - 100) / 50, 2)
-		y = round((self.position.y - 100) / 50, 2)
+		y = round(12 - ((self.position.y - 100) / 50), 2)
 
 		return f'X:{x} Y:{y}'
 

@@ -30,18 +30,32 @@ class EventHandler:
 					)
 
 				# Delete all balls
-				if event.key == pygame.K_w:
+				if event.key == pygame.K_e:
 					self.entity_manager.delete_all()
 
 				# Move all balls
 				if event.key == pygame.K_a:
 					self.entity_manager.apply_force(
-						-StateManager.get_force()
+						Vector2(
+							-StateManager.get_force(),
+							-StateManager.get_force()
+						)
 					)
 
 				if event.key == pygame.K_d:
 					self.entity_manager.apply_force(
-						StateManager.get_force()
+						Vector2(
+							StateManager.get_force(),
+							-StateManager.get_force()
+						)
+					)
+
+				if event.key == pygame.K_w:
+					self.entity_manager.apply_force(
+						Vector2(
+							0,
+							-StateManager.get_force()
+						)
 					)
 
 			if event.type == pygame.MOUSEBUTTONDOWN:
