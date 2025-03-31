@@ -13,9 +13,9 @@ class EntityManager:
         for entity in self.ball_dict.values():
             entity.apply_force(Vector2(force, -abs(force)))
 
-    def update_entities(self) -> None:
+    def update_entities(self, delta_time:float) -> None:
         for entity in self.ball_dict.values():
-            entity._update()
+            entity._update(delta_time)
     
     def add(self, ball: Ball) -> None:
         self.ball_dict[ball.id] = ball
@@ -23,6 +23,6 @@ class EntityManager:
     def delete_all(self) -> None:
         self.ball_dict = {}
 
-    def draw(self, screen, delta_time) -> None:
+    def draw(self, screen) -> None:
         for entity in self.ball_dict.values():
-            entity.draw(screen, delta_time)    
+            entity.draw(screen)    

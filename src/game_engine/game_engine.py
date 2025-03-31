@@ -45,8 +45,8 @@ class GameEngine:
 	def game_loop(self) -> None:
 		self.delta_time = self.clock.tick(300) / 1000.0
 
-		
 		self.handle_events()
+		self.update_entities()
 		self.render()
 
 
@@ -58,12 +58,16 @@ class GameEngine:
 		self.ui_handler.handle_events(events)
 
 
+	def update_entities(self) -> None:
+		self.entity_manager.update_entities(self.delta_time)
+
+
 	def render(self) -> None:
 
 		self.screen.fill((30, 30, 30))
 		self.ui_handler.draw(self.screen)
 		self.world_builder.draw(self.screen)
 		
-		self.entity_manager.draw(self.screen, self.delta_time)
+		self.entity_manager.draw(self.screen)
 
 		pygame.display.flip()

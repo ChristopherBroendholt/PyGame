@@ -69,9 +69,7 @@ class Ball:
 		return f'X:{x} Y:{y}'
 
 
-	def draw(self, screen, delta_time) -> None:
-		self._update(delta_time)
-
+	def draw(self, screen) -> None:
 		pygame.draw.circle(screen, self.color, self.position, self.radius)
 		
 		coordinate = self._get_pos_string()
