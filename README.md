@@ -10,11 +10,12 @@ Run the game
 
 Press `q` to add a ball
 Press `w` to remove all balls
-Press `space` to bounce balls
+Press `a` to apply force in a left and upright motion
+Press `d` to apply force in a right and upright motion
 
 ## Mass slider
 When creating a ball, the ball's mass will be determined by the mass slider.
 
 ## Force slider
-The force slider determines the amount of force applied to all balls after pressing `space`.
+The force slider determines the amount of force applied to all balls after pressing `a` or `d`.
 

@@ -36,26 +36,8 @@ class WorldBuilder:
 			self.vertical_grid_lines.append(line)
 
 
-	def draw_slider(screen) -> None:
-		
-		self.slider.draw(screen)
-
-
 	def draw(self, screen) -> None:
 		
-
-		# # In your event loop
-		# for event in pygame.event.get():
-		# 	slider.handle_event(event)
-
-		# # In your render
-		# slider.draw(screen)
-
-		# # To get the current value
-		# current_value = slider.get_value()
-
-
-
 		font = pygame.font.SysFont('Arial', bold=True, size=16)
 
 		x = 0

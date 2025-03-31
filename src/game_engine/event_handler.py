@@ -2,7 +2,6 @@ import pygame
 from pygame.math import Vector2
 
 from .state_manager import StateManager
-
 from ..entities.ball import Ball
 
 
@@ -13,7 +12,6 @@ class EventHandler:
 		self.entity_manager = entity_manager
 		
 
-	
 	def handle_events(self, events) -> bool:
 		running = True
 
@@ -36,7 +34,12 @@ class EventHandler:
 					self.entity_manager.delete_all()
 
 				# Move all balls
-				if event.key == pygame.K_SPACE:
+				if event.key == pygame.K_a:
+					self.entity_manager.apply_force(
+						-StateManager.get_force()
+					)
+
+				if event.key == pygame.K_d:
 					self.entity_manager.apply_force(
 						StateManager.get_force()
 					)
@@ -45,7 +48,5 @@ class EventHandler:
 				if event.button == 1:
 					self.mouse_pos = Vector2(event.pos)
 
-
-			
 
 		return running

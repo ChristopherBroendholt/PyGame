@@ -11,7 +11,7 @@ class EntityManager:
 
     def apply_force(self, force: int) -> None:
         for entity in self.ball_dict.values():
-            entity.apply_force(Vector2(force, -force))
+            entity.apply_force(Vector2(force, -abs(force)))
 
     def update_entities(self) -> None:
         for entity in self.ball_dict.values():
