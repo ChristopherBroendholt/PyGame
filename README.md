@@ -1,10 +1,44 @@
 # How to run
 
-Install libraries
-`pip install -r requirements.txt`
+## Windows
 
-Run the game
+Install Python using the Microsoft store
+
+`python -m venv .venv`
+Create virtual environment
+
+`venv/Scripts/activate`
+Active environment
+
+`pip install -r requirements.txt`
+Install required libraries
+
 `python main.py`
+Run the game
+
+`deactivate`
+Close the enviroment
+
+## MacOS
+
+`brew install python`
+Install python
+
+`python3 -m venv .venv`
+Create virtual environment
+
+`source .venv/bin/activate`
+Active environment
+
+`pip3 install -r requirements.txt`
+Install required libraries
+
+`python3 main.py`
+Run the game
+
+`deactivate`
+Close the enviroment
+
 
 # Game mechanics
 
