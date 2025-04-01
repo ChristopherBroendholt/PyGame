@@ -10,7 +10,7 @@ class EntityManager:
 		self.ball_dict: Dict[str, Ball] = {}
 
 	def apply_force(self, force: Vector2) -> None:
-		print(force)
+		print(f'Force: {force}')
 		
 		for entity in self.ball_dict.values():
 			entity.apply_force(force)

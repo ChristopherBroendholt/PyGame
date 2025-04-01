@@ -29,6 +29,8 @@ class Ball:
 
 	def _update(self, delta_time) -> None:
 
+		print(f'Delta_time {delta_time}')
+
 		gravity = self.gravity * self.mass
 		drag = -self.velocity * self.drag
 
